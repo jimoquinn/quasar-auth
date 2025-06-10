@@ -30,18 +30,14 @@ How it works:
 
 - stores/auth.js - Pinia Store - Manages authentication state, logic, and
   the hardcoded user id and password.
-
 - router/routes.js - Router Guards - Automatically redirects users
   based on auth state stored in Pinia.
-
 - components/LoginForm.vue - Login Form Component - Handles user input
   with validation. This component is intended to be included in another
   page, in this example, that page is pages/LoginPage.vue.
-
 - pages/LoginPage.vue - Login Page - The homepage of sorts, displays the user
   id and password &lt;q-input&gt; forms from the components/LoginForm.vue
   component.
-
 - pages/ProtectedPage.vue - Protected Page - Your protected content with
   logout button. If you are using a layout, just inclulde the &lt;script&gt;
   section in your layout .vue file. Also, include the logout &lt;q-btn&gt;
@@ -49,11 +45,10 @@ How it works:
 
 Setup:
 
-- Create quasar project:
-- Install Pinia: npm install pinia
-- Create the file structure as shown below
-- Update your quasar.config.js to include Pinia
-- The system will automatically redirect unauthenticated users to login
+- git clone https://github.com/jimoquinn/quasar-auth.git
+- cd quasar-auth
+- yarn
+- yarn quasar dev
 
 File structure:
 
@@ -74,12 +69,12 @@ src/
 
 Other information:
 
-- Both Pinia and Notify were added to quasar.config.js
+- Pinia, Notify and Cookies were added to quasar.config.js
 
 ```
    framework: {
      plugins: [
-       'Notify', 'Pinia'  // Required for $q.notify
+       'Notify', 'Cookies'  // Required for $q.notify
      ]
    }
 ```
