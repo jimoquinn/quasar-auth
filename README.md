@@ -43,6 +43,13 @@ How it works:
   section in your layout .vue file. Also, include the logout &lt;q-btn&gt;
   if you'd like.
 
+Pre-Setup:
+
+- node.js => v14, needs to be installed (node version manager is awesome
+  for installing node.js https://github.com/nvm-sh/nvm)
+- yarn needs to be installed (the old version)
+- quasar cli needs to be installed (yarn global add @quasar/cli)
+
 Setup:
 
 - git clone https://github.com/jimoquinn/quasar-auth.git
